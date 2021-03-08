@@ -29,7 +29,7 @@ def game():                                          #set def to call the game f
 
     while key != 27:                                     #while Esc key is not pressed.
         w.border(0)
-        w.addstr(0, 2, "Score: " + str(score) + " ")     #Printing "score" and 
+        w.addstr(0, 2, "Score: " + str(score) + " ")     #Printing "score" and
         w.addstr(0, 27, "Snake - for Pika & Gado, try to reach score '25'")                         #"Snake" on the border .
         w.timeout(150 - (len(snake)//5 + len(snake)//10)%120)#Increasing the speed of Snake as its lingtg increases.
 
@@ -66,7 +66,7 @@ def game():                                          #set def to call the game f
         if snake[0][1] == 0: snake[0][1] =  sw-2
         if snake[0][1] == sw-1: snake[0][1] =  1
 
-        
+
         if snake[0] == food:                              #When snake eats food.
             food = None
             score += 1
@@ -85,11 +85,11 @@ def game():                                          #set def to call the game f
     print("\nScore: "+ str(score))
     if score <= 10 and key != 27:
         print("Noob :) You lost when Snake is so short lol\n")
-    elif score >= 11:
+    elif 11 <= score <= 24:
         print('Good you are starting to get the hang of this\n')
     elif score >= 25:
         print("Amaizing you are pro in this game :)\n")
-    
+
 
 while True:
     game()
